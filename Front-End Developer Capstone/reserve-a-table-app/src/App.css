@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Markazi+Text:wght@500&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;400&family=Markazi+Text&display=swap');
 .App {
   text-align: center;
 }
@@ -30,6 +29,7 @@
   color: #61dafb;
 }
 
+/* Navstyling */
 nav ul {
   list-style: none;
   text-align: center;
@@ -53,4 +53,70 @@ nav a {
 
 nav a:hover, a:focus {
   color: #f4ce14;
+}
+
+/* HeroSection styling */
+.flexbox-container-hero-section {
+  background-color: #495e57;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  height: 400px;
+}
+
+.flexbox-item-1-hero-section {
+  padding-right: 6em;
+  padding-top: 2em;
+}
+
+.flexbox-item-1-hero-section h1 {
+  font-family: 'Markazi Text', serif;
+  font-weight: 400;
+  font-size: 40pt;
+  color: #f4ce14;
+  text-align: left;
+  margin: 0;
+}
+
+.flexbox-item-1-hero-section h2 {
+  font-family: 'Markazi Text', serif;
+  font-weight: 200;
+  font-size: 26pt;
+  color: white;
+  text-align: left;
+  margin: 0;
+}
+
+.flexbox-item-1-hero-section p {
+  font-family: 'Karla', sans-serif;
+  font-weight: 200;
+  font-size: 14pt;
+  text-align: left;
+  color: white;
+  text-align: left;
+  margin: 0;
+}
+
+.flexbox-item-1-hero-section button {
+  font-family: 'Karla', sans-serif;
+  font-weight: bold;
+  font-size: 12pt;
+  color: black;
+  text-align: left;
+  background: #f4ce14;
+  border-radius: 12px;
+  border: none;
+  padding: 8px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 10pt;
+}
+
+.flexbox-item-2-hero-section {
+  padding-left: 6em;
+  padding-top: 2em;
+}
+
+.flexbox-item-2-hero-section img {
+  border-radius: 16px;
 }

@@ -1,11 +1,22 @@
-import Navbar from "./components/Navbar";
+import Header from "./components/Header";
+import Nav from "./components/Nav";
+import HeroSection from "./components/HeroSection";
+import TableReserverSection from "./components/TableReserverSection";
+import AboutSection from "./components/AboutSection";
+import Footer from "./components/Footer";
+
 import './App.css';
 
 function App() {
   return (
-    <nav>
-      <Navbar />
-    </nav>
+      <main>
+        <Header />
+        <Nav />
+        <HeroSection />
+        <TableReserverSection />
+        <AboutSection />
+        <Footer />
+      </main>
   );
 }
 
