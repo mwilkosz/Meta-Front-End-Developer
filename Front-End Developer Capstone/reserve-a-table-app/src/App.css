@@ -1,34 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;400&family=Markazi+Text&display=swap');
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
 /* Navstyling */
 nav ul {
   list-style: none;
@@ -112,6 +82,14 @@ nav a:hover, a:focus {
   margin-top: 10pt;
 }
 
+.flexbox-item-1-hero-section button:hover {background-color: #f4cf14b7}
+
+.flexbox-item-1-hero-section button:active {
+  background-color: #f4cf14b7;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
 .flexbox-item-2-hero-section {
   padding-left: 6em;
   padding-top: 2em;
@@ -119,4 +97,194 @@ nav a:hover, a:focus {
 
 .flexbox-item-2-hero-section img {
   border-radius: 16px;
+}
+
+/* HeroSection styling mobile*/
+@media (max-width: 767px) {
+  .flexbox-container-hero-section {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+  }
+
+  .flexbox-item-1-hero-section {
+    padding: 1em;
+    text-align: center;
+  }
+
+  .flexbox-item-2-hero-section {
+    padding: 1em;
+  }
+
+  .flexbox-item-2-hero-section img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* TableReserverSection styling */
+.flexbox-table-reserver-section {
+  background-color: #edefee;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  height: 400px;
+}
+
+/* AboutSection styling */
+.flexbox-container-about-section {
+  background-color: #f4ce14;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.flexbox-item-1-about-section {
+  padding-right: 1em;
+  padding-top: 2em;
+}
+
+.flexbox-item-1-about-section h1 {
+  font-family: 'Markazi Text', serif;
+  font-weight: 400;
+  font-size: 40pt;
+  color: white;
+  text-align: left;
+  margin: 0;
+}
+
+.flexbox-item-1-about-section p {
+  font-family: 'Karla', sans-serif;
+  font-weight: 400;
+  font-size: 14pt;
+  text-align: left;
+  color: black;
+  text-align: left;
+  margin: 0;
+}
+
+.flexbox-item-2-about-section {
+  position: relative;
+  padding-left: 9em;
+  padding-top: 2em;
+  padding-bottom: 12em;
+}
+
+.img-1-about-section {
+  position: absolute;
+  border-radius: 16px;
+}
+
+.img-2-about-section {
+  position: relative;
+  border-radius: 16px;
+}
+
+.img-1-about-section:nth-of-type(1) {
+  border-radius: 16px;
+  z-index: 1;
+  top: 28%;
+  left: 0;
+}
+
+/* AboutSection styling mobile*/
+@media (max-width: 767px) {
+  .flexbox-container-about-section {
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+  }
+
+  .flexbox-item-2-about-section {
+    padding-left: 0;
+    padding-bottom: 0;
+  }
+
+  .img-1-about-section {
+    display: none;
+  }
+
+  .img-2-about-section {
+    border-radius: 16px;
+  }
+}
+
+/* Footer styling */
+footer {
+  display: flex;
+  justify-content:center;
+}
+
+.flexbox-item-1-footer{
+  padding-top: 2em;
+  padding-bottom: 2em;
+  padding-right: 6em;
+}
+
+.flexbox-item-2-footer{
+  font-family: 'Markazi Text', serif;
+  font-weight: 400;
+  font-size: 16pt;
+  list-style-type: none;
+  padding-bottom: 2em;
+  padding-right: 6em;
+}
+
+.flexbox-item-2-footer a{
+  text-decoration: none;
+  color:black;
+}
+
+.flexbox-item-2-footer a:hover, a:focus {
+  color: #f4ce14;
+}
+
+.flexbox-item-3-footer{
+  font-family: 'Markazi Text', serif;
+  font-weight: 400;
+  font-size: 16pt;
+  list-style-type: none;
+  padding-bottom: 2em;
+  padding-left: 5em;
+
+}
+
+.flexbox-item-4-footer{
+  font-family: 'Markazi Text', serif;
+  font-size: 16pt;
+  list-style-type: none;
+  padding-bottom: 2em;
+  padding-left: 5em;
+}
+
+.flexbox-item-4-footer a {
+  text-decoration: none;
+  color:black;
+  padding: 0.5em;
+}
+
+/* Footer styling mobile*/
+@media (max-width: 767px) {
+  footer {
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+  }
+  .flexbox-item-1-footer{
+    padding-left: 6em;
+    padding-bottom: 0em;
+  }
+  .flexbox-item-2-footer{
+    padding-left: 6em;
+    padding-bottom: 0em;
+  }
+  .flexbox-item-3-footer{
+    padding-right: 5em;
+    padding-bottom: 0em;
+  }
+  .flexbox-item-4-footer{
+    padding-right: 3em;
+    padding-bottom: 1em;
+  }
 }
