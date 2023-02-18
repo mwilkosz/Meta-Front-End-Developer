@@ -1,13 +1,17 @@
 import React, { useState, useReducer } from 'react';
 import BookingForm from './BookingForm';
+import { fetchAPI } from './temp.js'
 
 export function initializeTimes() {
-  return ['15:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00', '22:00'];
+  const today = new Date();
+  const availableTimes = fetchAPI(today);
+  return availableTimes;
 }
 
 export function updateTimes(state, action) {
-  // Here you can modify the available times based on the selected date
-  return initializeTimes();
+  const selectedDate = action;
+  const availableTimes = fetchAPI(selectedDate);
+  return availableTimes;
 }
 
 export default function BookingPage() {
