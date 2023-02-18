@@ -1,4 +1,12 @@
 import { initializeTimes, updateTimes } from './BookingPage';
+import { render, screen } from "@testing-library/react";
+import BookingForm from './BookingPage';
+
+test('Renders the BookingForm reservation heading', () => {
+    render(<BookingForm />);
+    const headingElement = screen.getByText("Reservation");
+    expect(headingElement).toBeInTheDocument();
+})
 
 describe('initializeTimes', () => {
   test('returns an array of times', () => {
