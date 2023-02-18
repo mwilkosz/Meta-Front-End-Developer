@@ -1,7 +1,7 @@
 import Header from "./components/Header";
 import Nav from "./components/Nav";
 import HeroSection from "./components/HeroSection";
-import TableReserverSection from "./components/TableReserverSection";
+import BookingPage from "./components/BookingPage";
 import AboutSection from "./components/AboutSection";
 import Footer from "./components/Footer";
 
@@ -13,7 +13,7 @@ function App() {
         <Header />
         <Nav />
         <HeroSection />
-        <TableReserverSection />
+        <BookingPage />
         <AboutSection />
         <Footer />
       </main>

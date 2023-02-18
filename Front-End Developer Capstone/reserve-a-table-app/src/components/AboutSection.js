@@ -3,7 +3,7 @@ import restaurant_chief from  "../images/restaurant_chief.PNG"
 
 export default function AboutSection() {
     return (
-      <section class="flexbox-container-about-section">
+      <section class="flexbox-container-about-section" id="about-section">
         <div class="flexbox-item-1-about-section">
           <h1>About Us</h1>
           <p>

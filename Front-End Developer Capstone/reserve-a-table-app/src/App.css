@@ -124,13 +124,92 @@ nav a:hover, a:focus {
 }
 
 /* TableReserverSection styling */
-.flexbox-table-reserver-section {
+.flexbox-reserver-section {
   background-color: #edefee;
   display: flex;
-  align-items: flex-start;
   justify-content: center;
-  height: 400px;
+  padding-top: 8em;
 }
+
+.flexbox-calendar-table-reserver-section {
+  padding-right: 14em;
+  padding-top: 2em;
+}
+
+.flexbox-calendar-table-reserver-section h1{
+  font-family: 'Markazi Text', serif;
+  font-weight: 400;
+  font-size: 40pt;
+  text-align: left;
+  margin: 0;
+  padding-bottom: 1em;
+}
+
+.react-calendar {
+  font-family: 'Markazi Text', serif;
+  background-color: #edefee;
+  border-radius: 6px;
+  width: 400px;
+  font-weight: 600;
+  font-size: 14pt;
+  line-height: 2em;
+  padding-bottom: 2em;
+  text-align: center;
+ }
+
+ .react-calendar__navigation {
+  display: flex;
+ }
+ .react-calendar__navigation button {
+  min-width: 50px;
+  font-family: 'Markazi Text', serif;
+  font-size: 18pt;
+  margin-top: 8px;
+  padding: 5px;
+  border: 0;
+ }
+
+ .react-calendar__navigation button:enabled:hover,
+ .react-calendar__navigation button:enabled:focus {
+  background-color: #edefee8e;
+ }
+
+ .react-calendar__tile{
+  font-family: 'Markazi Text', serif;
+  font-size: 18pt;
+  padding: 5px;
+  border: 0;
+ }
+
+ .react-calendar__tile:enabled:hover
+ .react-calendar__tile:enabled:focus {
+  background: #f4ce14;
+  border-radius: 6px;
+ }
+ .react-calendar__tile--now {
+  background: #f4cf1475;
+  border-radius: 6px;
+  font-weight: bold;
+ }
+ .react-calendar__tile--now:enabled:hover,
+ .react-calendar__tile--now:enabled:focus {
+  border-radius: 6px;
+  font-weight: bold;
+ }
+ .react-calendar__tile--hasActive:enabled:hover,
+ .react-calendar__tile--hasActive:enabled:focus {
+  background: #f4ce14;
+ }
+ .react-calendar__tile--active {
+  border-radius: 6px;
+  background: #f4ce14;
+  font-weight: bold;
+ }
+
+ .react-calendar__tile--active:enabled:hover,
+ .react-calendar__tile--active:enabled:focus {
+  background: #f4ce14;
+ }
 
 /* AboutSection styling */
 .flexbox-container-about-section {
@@ -214,11 +293,11 @@ nav a:hover, a:focus {
 footer {
   display: flex;
   justify-content:center;
+  padding-bottom: 1em;
 }
 
 .flexbox-item-1-footer{
   padding-top: 2em;
-  padding-bottom: 2em;
   padding-right: 6em;
 }
 
@@ -227,7 +306,6 @@ footer {
   font-weight: 400;
   font-size: 16pt;
   list-style-type: none;
-  padding-bottom: 2em;
   padding-right: 6em;
 }
 
@@ -245,7 +323,6 @@ footer {
   font-weight: 400;
   font-size: 16pt;
   list-style-type: none;
-  padding-bottom: 2em;
   padding-left: 5em;
 
 }
@@ -254,7 +331,6 @@ footer {
   font-family: 'Markazi Text', serif;
   font-size: 16pt;
   list-style-type: none;
-  padding-bottom: 2em;
   padding-left: 5em;
 }
 
@@ -284,7 +360,7 @@ footer {
     padding-bottom: 0em;
   }
   .flexbox-item-4-footer{
-    padding-right: 3em;
+    padding-right: 1em;
     padding-bottom: 1em;
   }
 }

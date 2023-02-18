@@ -5,7 +5,7 @@ import {
   faTwitter,
 } from '@fortawesome/free-brands-svg-icons';
 import little_lemon_logo_vertical from  "../images/little_lemon_logo_vertical.PNG"
-import navObject from './utils';
+import { navObject, handleClick } from './utils.js';
 
 const socials = [
   {
@@ -30,10 +30,12 @@ export default function Footer() {
         </div>
         <div class="flexbox-item-2-footer">
           <h3>Navigation</h3>
-          {navObject.map(({ display, url }) => (
-                <li><a href={url}>
+          {navObject.map(({ display, url, id }) => (
+            <li key={id}>
+              <a href={url} onClick={(event) => handleClick(event, id, url)}>
                 {display}
-                </a></li>
+              </a>
+            </li>
           ))}
         </div>
         <div class="flexbox-item-3-footer">
