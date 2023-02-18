@@ -1,12 +1,12 @@
 import React from 'react';
 import Calendar from 'react-calendar';
 
-function BookingForm({ date, setDate, time, handleTimeChange, guests, handleGuestsChange, occasion, handleOccasionChange, availableTimes, availableOcassions}) {
+function BookingForm({ date, handleDateChange, time, handleTimeChange, guests, handleGuestsChange, occasion, handleOccasionChange, availableTimes, availableOcassions}) {
     return (
         <>
             <div className="flexbox-calendar-table-reserver-section" id="reservations-section">
                 <h1>Reservation</h1>
-                <Calendar onChange={setDate} value={date} />
+                <Calendar onChange={handleDateChange} value={date} />
             </div>
             <div className="flexbox-details-table-reserver-section">
                 <form style={{ display: "grid", maxWidth: "200px", gap: "20px" }}>
