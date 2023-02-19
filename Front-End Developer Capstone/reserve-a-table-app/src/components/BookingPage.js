@@ -17,9 +17,6 @@ export function updateTimes(state, action) {
 
 export default function BookingPage() {
   const [date, setDate] = useState(new Date());
-  const [guests, setGuests] = useState(1);
-  const [occasion, setOccasion] = useState('');
-  const [selectedTime, setSelectedTime] = useState('');
   const navigate = useNavigate();
 
   const availableOcassions = ['Birthday', 'Anniversary'];
@@ -33,18 +30,6 @@ export default function BookingPage() {
     }
   }
 
-  const handleTimeChange = (event) => {
-    setSelectedTime(event.target.value);
-  };
-
-  const handleGuestsChange = (event) => {
-    setGuests(parseInt(event.target.value));
-  };
-
-  const handleOccasionChange = (event) => {
-    setOccasion(event.target.value);
-  };
-
   const handleDateChange = (date) => {
     setDate(date);
     dispatch(date);
@@ -55,15 +40,8 @@ export default function BookingPage() {
       <BookingForm
         date={date}
         handleDateChange={handleDateChange}
-        time={selectedTime}
-        handleTimeChange={handleTimeChange}
-        guests={guests}
-        handleGuestsChange={handleGuestsChange}
-        occasion={occasion}
-        handleOccasionChange={handleOccasionChange}
         availableTimes={availableTimes}
         availableOcassions={availableOcassions}
-        dispatch={dispatch}
         onSubmit={submitForm}
       />
     </section>
