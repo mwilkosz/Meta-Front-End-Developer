@@ -1,5 +1,10 @@
 import img_food from  "../images/restaurant_food.jpg"
 
+const handleClick = (event) => {
+  event.preventDefault();
+  document.getElementById('reservations-section').scrollIntoView({ behavior: 'smooth' });
+  };
+
 export default function HeroSection() {
     return (
       <section class="flexbox-container-hero-section">
@@ -12,7 +17,7 @@ export default function HeroSection() {
             recipes served with a modern<br/>
             twist.
           </p>
-          <button>Reserve a Table</button>
+          <button onClick={(event) => handleClick(event)}>Reserve a Table</button>
         </div>
         <div class="flexbox-item-2-hero-section">
           <img src={img_food} alt="little lemon restaurant food" style={{width: 400, height: 450, verticalAlign:"middle"}}></img>

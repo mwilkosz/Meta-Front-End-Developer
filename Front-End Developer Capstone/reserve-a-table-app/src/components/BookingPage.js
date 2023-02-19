@@ -1,6 +1,7 @@
 import React, { useState, useReducer } from 'react';
 import BookingForm from './BookingForm';
-import { fetchAPI } from './temp.js'
+import { fetchAPI, submitAPI } from './temp.js'
+import { useNavigate } from 'react-router-dom';
 
 export function initializeTimes() {
   const today = new Date();
@@ -19,10 +20,18 @@ export default function BookingPage() {
   const [guests, setGuests] = useState(1);
   const [occasion, setOccasion] = useState('');
   const [selectedTime, setSelectedTime] = useState('');
+  const navigate = useNavigate();
 
   const availableOcassions = ['Birthday', 'Anniversary'];
 
   const [availableTimes, dispatch] = useReducer(updateTimes, [], initializeTimes);
+
+  function submitForm(formData) {
+    const success = submitAPI(formData);
+    if (success) {
+      navigate('/confirmed-booking');
+    }
+  }
 
   const handleTimeChange = (event) => {
     setSelectedTime(event.target.value);
@@ -54,9 +63,8 @@ export default function BookingPage() {
         availableTimes={availableTimes}
         availableOcassions={availableOcassions}
         dispatch={dispatch}
+        onSubmit={submitForm}
       />
     </section>
   );
 }
-
-
