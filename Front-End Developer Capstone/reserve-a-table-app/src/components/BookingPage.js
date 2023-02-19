@@ -22,6 +22,10 @@ export default function BookingPage() {
   const availableOcassions = ['Birthday', 'Anniversary'];
 
   const [availableTimes, dispatch] = useReducer(updateTimes, [], initializeTimes);
+  
+  const defaultTime = availableTimes[0];
+  const defaultGuests = 1;
+  const defaultOccasion = availableOcassions[0];
 
   function submitForm(formData) {
     const success = submitAPI(formData);
@@ -43,6 +47,9 @@ export default function BookingPage() {
         availableTimes={availableTimes}
         availableOcassions={availableOcassions}
         onSubmit={submitForm}
+        defaultTime={defaultTime}
+        defaultGuests={defaultGuests}
+        defaultOccasion={defaultOccasion}
       />
     </section>
   );

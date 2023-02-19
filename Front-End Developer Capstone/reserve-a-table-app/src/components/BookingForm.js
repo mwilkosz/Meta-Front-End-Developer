@@ -4,18 +4,18 @@ import Calendar from 'react-calendar';
 function BookingForm({
     date,
     handleDateChange,
-    time,
-    guests,
-    occasion,
     availableTimes,
     availableOcassions,
     onSubmit,
+    defaultTime,
+    defaultGuests,
+    defaultOccasion,
   }) {
     const [formData, setFormData] = useState({
-      date,
-      time,
-      guests,
-      occasion,
+        date,
+        time: defaultTime,
+        guests: defaultGuests,
+        occasion: defaultOccasion,
     });
 
     const handleSubmit = (event) => {
