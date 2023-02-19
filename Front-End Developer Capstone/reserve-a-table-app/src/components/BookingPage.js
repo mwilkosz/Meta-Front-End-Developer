@@ -47,6 +47,7 @@ export default function BookingPage() {
 
   const handleDateChange = (date) => {
     setDate(date);
+    dispatch(date);
   };
 
   return (
