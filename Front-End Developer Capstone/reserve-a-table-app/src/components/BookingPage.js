@@ -9,8 +9,8 @@ export function initializeTimes() {
   return availableTimes;
 }
 
-export function updateTimes(state, action) {
-  const selectedDate = action;
+export function updateTimes(state, date) {
+  const selectedDate = date;
   const availableTimes = fetchAPI(selectedDate);
   return availableTimes;
 }
@@ -22,7 +22,7 @@ export default function BookingPage() {
   const availableOcassions = ['Birthday', 'Anniversary'];
 
   const [availableTimes, dispatch] = useReducer(updateTimes, [], initializeTimes);
-  
+
   const defaultTime = availableTimes[0];
   const defaultGuests = 1;
   const defaultOccasion = availableOcassions[0];
@@ -44,12 +44,12 @@ export default function BookingPage() {
       <BookingForm
         date={date}
         handleDateChange={handleDateChange}
-        availableTimes={availableTimes}
-        availableOcassions={availableOcassions}
-        onSubmit={submitForm}
         defaultTime={defaultTime}
+        availableTimes={availableTimes}
         defaultGuests={defaultGuests}
         defaultOccasion={defaultOccasion}
+        availableOcassions={availableOcassions}
+        onSubmit={submitForm}
       />
     </section>
   );

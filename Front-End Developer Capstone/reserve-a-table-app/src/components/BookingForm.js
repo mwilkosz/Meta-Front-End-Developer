@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import Calendar from 'react-calendar';
 
-function BookingForm({
+export default function BookingForm({
     date,
     handleDateChange,
-    availableTimes,
-    availableOcassions,
-    onSubmit,
     defaultTime,
+    availableTimes,
     defaultGuests,
     defaultOccasion,
+    availableOcassions,
+    onSubmit,
   }) {
     const [formData, setFormData] = useState({
         date,
@@ -61,4 +61,3 @@ function BookingForm({
     );
   }
 
-export default BookingForm;
