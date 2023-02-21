@@ -39,12 +39,12 @@ export default function BookingForm({
 
   return (
     <>
-      <div className="flexbox-calendar-table-reserver-section" id="reservations-section">
+      <div className="flexbox-calendar-booking-form" id="reservations-section">
         <h1>Reservation</h1>
         <Calendar onChange={handleDateChange} value={date} />
       </div>
-      <div className="flexbox-details-table-reserver-section">
-        <form style={{ display: 'grid', maxWidth: '200px', gap: '20px' }} onSubmit={handleSubmit}>
+      <div className="flexbox-details-booking-form">
+        <form className="grid-details-booking-form" onSubmit={handleSubmit}>
           <label htmlFor="name">Name</label>
             <input type="text" id="name" name="name" value={formData.name} onChange={handleFieldChange} required />
           <label htmlFor="phone">Phone</label>

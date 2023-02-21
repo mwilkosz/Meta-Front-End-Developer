@@ -8,7 +8,7 @@ const handleClick = (event) => {
 export default function HeroSection() {
     return (
       <section class="flexbox-container-hero-section">
-        <div class="flexbox-item-1-hero-section">
+        <div class="flexbox-item-intro-hero-section">
           <h1>Little Lemon</h1>
           <h2>Chicago</h2>
           <p>We are a family owned <br/>
@@ -19,7 +19,7 @@ export default function HeroSection() {
           </p>
           <button onClick={(event) => handleClick(event)}>Reserve a Table</button>
         </div>
-        <div class="flexbox-item-2-hero-section">
+        <div class="flexbox-item-img-hero-section">
           <img src={img_food} alt="little lemon restaurant food" style={{width: 400, height: 450, verticalAlign:"middle"}}></img>
         </div>
       </section>

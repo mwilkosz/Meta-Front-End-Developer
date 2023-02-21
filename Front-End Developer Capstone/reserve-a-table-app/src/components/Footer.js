@@ -25,10 +25,10 @@ const socials = [
 export default function Footer() {
     return (
       <footer>
-        <div class="flexbox-item-1-footer">
+        <div class="flexbox-item-img-footer">
             <img src={little_lemon_logo_vertical} alt="little lemon restaurant" style={{width: 100, height: 150, verticalAlign:"middle"}}></img>
         </div>
-        <div class="flexbox-item-2-footer">
+        <div class="flexbox-item-navigation-footer">
           <h3>Navigation</h3>
           {navObject.map(({ display, url, id }) => (
             <li key={id}>
@@ -38,7 +38,7 @@ export default function Footer() {
             </li>
           ))}
         </div>
-        <div class="flexbox-item-3-footer">
+        <div class="flexbox-item-contact-footer">
           <h3>Contact</h3>
           <p>
             Little Lemon<br/>
@@ -47,7 +47,7 @@ export default function Footer() {
             IL 60605<br/>
           </p>
         </div>
-        <div class="flexbox-item-4-footer">
+        <div class="flexbox-item-media-footer">
           <h3>Social Media</h3>
           {socials.map(({ icon, url }) => (
                 <a href={url}>

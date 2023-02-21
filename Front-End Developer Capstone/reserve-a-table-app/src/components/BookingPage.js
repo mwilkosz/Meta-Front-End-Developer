@@ -40,7 +40,7 @@ export default function BookingPage() {
   };
 
   return (
-    <section className="flexbox-reserver-section">
+    <section className="flexbox-booking-page">
       <BookingForm
         date={date}
         handleDateChange={handleDateChange}

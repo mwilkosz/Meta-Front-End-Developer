@@ -34,12 +34,12 @@ nav a:hover, a:focus {
   height: 400px;
 }
 
-.flexbox-item-1-hero-section {
+.flexbox-item-intro-hero-section {
   padding-right: 6em;
   padding-top: 2em;
 }
 
-.flexbox-item-1-hero-section h1 {
+.flexbox-item-intro-hero-section h1 {
   font-family: 'Markazi Text', serif;
   font-weight: 400;
   font-size: 40pt;
@@ -48,7 +48,7 @@ nav a:hover, a:focus {
   margin: 0;
 }
 
-.flexbox-item-1-hero-section h2 {
+.flexbox-item-intro-hero-section h2 {
   font-family: 'Markazi Text', serif;
   font-weight: 200;
   font-size: 26pt;
@@ -57,7 +57,7 @@ nav a:hover, a:focus {
   margin: 0;
 }
 
-.flexbox-item-1-hero-section p {
+.flexbox-item-intro-hero-section p {
   font-family: 'Karla', sans-serif;
   font-weight: 200;
   font-size: 14pt;
@@ -67,7 +67,7 @@ nav a:hover, a:focus {
   margin: 0;
 }
 
-.flexbox-item-1-hero-section button {
+.flexbox-item-intro-hero-section button {
   font-family: 'Karla', sans-serif;
   font-weight: bold;
   font-size: 12pt;
@@ -82,20 +82,20 @@ nav a:hover, a:focus {
   margin-top: 10pt;
 }
 
-.flexbox-item-1-hero-section button:hover {background-color: #f4cf14b7}
+.flexbox-item-intro-hero-section button:hover {background-color: #f4cf14b7}
 
-.flexbox-item-1-hero-section button:active {
+.flexbox-item-intro-hero-section button:active {
   background-color: #f4cf14b7;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
 
-.flexbox-item-2-hero-section {
+.flexbox-item-img-hero-section {
   padding-left: 6em;
   padding-top: 2em;
 }
 
-.flexbox-item-2-hero-section img {
+.flexbox-item-img-hero-section img {
   border-radius: 16px;
 }
 
@@ -108,41 +108,63 @@ nav a:hover, a:focus {
     height: auto;
   }
 
-  .flexbox-item-1-hero-section {
+  .flexbox-item-intro-hero-section {
     padding: 1em;
     text-align: center;
   }
 
-  .flexbox-item-2-hero-section {
+  .flexbox-item-img-hero-section {
     padding: 1em;
   }
 
-  .flexbox-item-2-hero-section img {
+  .flexbox-item-img-hero-section img {
     width: 100%;
     height: auto;
   }
 }
 
-/* TableReserverSection styling */
-.flexbox-reserver-section {
+/* BookingPage styling */
+.flexbox-booking-page {
   background-color: #edefee;
   display: flex;
   justify-content: center;
   padding-top: 8em;
 }
 
-.flexbox-calendar-table-reserver-section {
+/* BookingForm styling */
+.flexbox-calendar-booking-form {
   padding-right: 14em;
   padding-top: 2em;
 }
 
-.flexbox-calendar-table-reserver-section h1{
+.flexbox-calendar-booking-form h1{
   font-family: 'Markazi Text', serif;
   font-weight: 400;
   font-size: 40pt;
   text-align: left;
   margin: 0;
   padding-bottom: 1em;
+}
+
+.flexbox-calendar-booking-form {
+  padding-right: 5em;
+  padding-top: 2em;
+}
+
+.flexbox-details-booking-form{
+ justify-content: flex-end;
+}
+
+.grid-details-booking-form{
+  font-family: 'Markazi Text', serif;
+  font-weight: 400;
+  font-size: 18pt;
+  display: grid;
+  width: 250px;
+  gap: 10px;
+  padding-left: 5em;
+  padding-top: 7em;
+  padding-bottom: 4em;
 }
 
 .react-calendar {
@@ -219,12 +241,12 @@ nav a:hover, a:focus {
   justify-content: center;
 }
 
-.flexbox-item-1-about-section {
+.flexbox-item-intro-about-section {
   padding-right: 1em;
   padding-top: 2em;
 }
 
-.flexbox-item-1-about-section h1 {
+.flexbox-item-intro-about-section h1 {
   font-family: 'Markazi Text', serif;
   font-weight: 400;
   font-size: 40pt;
@@ -233,7 +255,7 @@ nav a:hover, a:focus {
   margin: 0;
 }
 
-.flexbox-item-1-about-section p {
+.flexbox-item-intro-about-section p {
   font-family: 'Karla', sans-serif;
   font-weight: 400;
   font-size: 14pt;
@@ -243,7 +265,7 @@ nav a:hover, a:focus {
   margin: 0;
 }
 
-.flexbox-item-2-about-section {
+.flexbox-item-images-about-section {
   position: relative;
   padding-left: 9em;
   padding-top: 2em;
@@ -296,12 +318,12 @@ footer {
   padding-bottom: 1em;
 }
 
-.flexbox-item-1-footer{
+.flexbox-item-img-footer{
   padding-top: 2em;
   padding-right: 6em;
 }
 
-.flexbox-item-2-footer{
+.flexbox-item-navigation-footer{
   font-family: 'Markazi Text', serif;
   font-weight: 400;
   font-size: 16pt;
@@ -309,16 +331,16 @@ footer {
   padding-right: 6em;
 }
 
-.flexbox-item-2-footer a{
+.flexbox-item-navigation-footer a{
   text-decoration: none;
   color:black;
 }
 
-.flexbox-item-2-footer a:hover, a:focus {
+.flexbox-item-navigation-footer a:hover, a:focus {
   color: #f4ce14;
 }
 
-.flexbox-item-3-footer{
+.flexbox-item-contact-footer{
   font-family: 'Markazi Text', serif;
   font-weight: 400;
   font-size: 16pt;
@@ -327,14 +349,14 @@ footer {
 
 }
 
-.flexbox-item-4-footer{
+.flexbox-item-media-footer{
   font-family: 'Markazi Text', serif;
   font-size: 16pt;
   list-style-type: none;
   padding-left: 5em;
 }
 
-.flexbox-item-4-footer a {
+.flexbox-item-media-footer a {
   text-decoration: none;
   color:black;
   padding: 0.5em;
@@ -351,15 +373,15 @@ footer {
     padding-left: 6em;
     padding-bottom: 0em;
   }
-  .flexbox-item-2-footer{
+  .flexbox-item-navigation-footer{
     padding-left: 6em;
     padding-bottom: 0em;
   }
-  .flexbox-item-3-footer{
+  .flexbox-item-contact-footer{
     padding-right: 5em;
     padding-bottom: 0em;
   }
-  .flexbox-item-4-footer{
+  .flexbox-item-media-footer{
     padding-right: 1em;
     padding-bottom: 1em;
   }
