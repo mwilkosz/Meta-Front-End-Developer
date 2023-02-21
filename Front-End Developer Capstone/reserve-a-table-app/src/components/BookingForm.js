@@ -17,6 +17,7 @@ export default function BookingForm({
     time: defaultTime,
     guests: defaultGuests,
     occasion: defaultOccasion,
+    phone: '',
   });
 
   const handleSubmit = (event) => {
@@ -33,6 +34,7 @@ export default function BookingForm({
       ...prevState,
       [name]: value,
     }));
+    console.log(name, value)
   };
 
   return (
@@ -45,6 +47,8 @@ export default function BookingForm({
         <form style={{ display: 'grid', maxWidth: '200px', gap: '20px' }} onSubmit={handleSubmit}>
           <label htmlFor="name">Name</label>
             <input type="text" id="name" name="name" value={formData.name} onChange={handleFieldChange} required />
+          <label htmlFor="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" value={formData.phone} onChange={handleFieldChange} required />
           <label htmlFor="res-time">Choose time</label>
             <select id="res-time" name="time" value={formData.time} onChange={handleFieldChange} required>
               {availableTimes.map((time) => (
@@ -56,11 +60,11 @@ export default function BookingForm({
           <label htmlFor="occasion">Occasion</label>
             <select id="occasion" name="occasion" value={formData.occasion} onChange={handleFieldChange} required>
               <option value="" disabled hidden>Select an occasion</option>
-                {availableOcassions.map((occasion) => (
+              {availableOcassions.map((occasion) => (
                 <option key={occasion}>{occasion}</option>
               ))}
             </select>
-            <input type="submit" value="Make Your reservation" disabled={!formData.guests} />
+          <input type="submit" value="Make Your reservation" disabled={!formData.name | !formData.phone} />
         </form>
       </div>
     </>
