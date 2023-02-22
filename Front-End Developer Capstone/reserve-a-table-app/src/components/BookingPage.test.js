@@ -9,7 +9,7 @@ jest.mock('react-router-dom', () => ({
 }));
 
 describe('BookingForm', () => {
-  test('Renders the BookingForm reservation heading', () => {
+  test('Renders the BookingForm', () => {
       render(<BookingForm />);
       const headingElement = screen.getByText("Reservation");
       expect(headingElement).toBeInTheDocument();

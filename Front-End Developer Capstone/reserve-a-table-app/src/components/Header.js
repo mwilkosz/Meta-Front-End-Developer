@@ -1,7 +1,8 @@
-// TODO: Header + Test + Cleanup html att + HTML + 
+import Nav from "./Nav";
 export default function Header() {
     return (
       <header>
+        <Nav />
       </header>
     )
   }

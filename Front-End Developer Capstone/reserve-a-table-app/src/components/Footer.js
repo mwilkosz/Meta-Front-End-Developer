@@ -23,13 +23,14 @@ const socials = [
 ];
 
 export default function Footer() {
-    return (
-      <footer>
-        <div class="flexbox-item-img-footer">
-            <img src={little_lemon_logo_vertical} alt="little lemon restaurant" style={{width: 100, height: 150, verticalAlign:"middle"}}></img>
-        </div>
-        <div class="flexbox-item-navigation-footer">
-          <h3>Navigation</h3>
+  return (
+    <footer>
+      <div className="flexbox-item-img-footer">
+        <img src={little_lemon_logo_vertical} alt="little lemon restaurant" style={{width: 100, height: 150, verticalAlign:"middle"}}></img>
+      </div>
+      <div className="flexbox-item-navigation-footer" aria-labelledby="navigation-heading">
+        <h3 id="navigation-heading">Navigation</h3>
+        <ul>
           {navObject.map(({ display, url, id }) => (
             <li key={id}>
               <a href={url} onClick={(event) => handleClick(event, id, url)}>
@@ -37,24 +38,29 @@ export default function Footer() {
               </a>
             </li>
           ))}
-        </div>
-        <div class="flexbox-item-contact-footer">
-          <h3>Contact</h3>
-          <p>
-            Little Lemon<br/>
-            805 S State St,<br/>
-            Chicago<br/>
-            IL 60605<br/>
-          </p>
-        </div>
-        <div class="flexbox-item-media-footer">
-          <h3>Social Media</h3>
-          {socials.map(({ icon, url }) => (
+        </ul>
+      </div>
+      <div className="flexbox-item-contact-footer" aria-labelledby="contact-heading">
+        <h3 id="contact-heading">Contact</h3>
+        <p>
+          Little Lemon<br/>
+          805 S State St,<br/>
+          Chicago<br/>
+          IL 60605<br/>
+        </p>
+      </div>
+      <div className="flexbox-item-media-footer" aria-labelledby="media-heading">
+        <h3 id="media-heading">Social Media</h3>
+        <ul>
+        {socials.map(({ icon, url }, index) => (
+                <li key={index}>
                 <a href={url}>
                   <FontAwesomeIcon color="black" icon={icon} size="2x" />
                 </a>
+                </li>
           ))}
-        </div>
-      </footer>
-    )
-  }
+        </ul>
+      </div>
+    </footer>
+  )
+}

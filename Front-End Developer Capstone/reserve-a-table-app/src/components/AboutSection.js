@@ -3,8 +3,11 @@ import restaurant_chief from  "../images/restaurant_chief.PNG"
 
 export default function AboutSection() {
     return (
-      <section class="flexbox-container-about-section">
-        <div class="flexbox-item-intro-about-section">
+      <section
+        className="flexbox-container-about-section"
+        aria-label="About Us section"
+      >
+        <div className="flexbox-item-intro-about-section">
           <h1>About Us</h1>
           <p>
             Our passion for great food is<br/>
@@ -20,9 +23,30 @@ export default function AboutSection() {
             all of your senses with every bite.<br/>
           </p>
         </div>
-        <div class="flexbox-item-images-about-section">
-          <div><img class="img-1-about-section" src={restaurant_chief} alt="Little Lemon Restaurant food" style={{width: 400, height: 450, verticalAlign:"middle"}}></img></div>
-          <div><img class="img-2-about-section" src={mario_and_adrian} alt="Little Lemon Restaurant food" style={{width: 400, height: 450, verticalAlign:"middle"}}></img></div>
+        <div
+          className="flexbox-item-images-about-section"
+          aria-label="Images section"
+        >
+          <div>
+            <img
+              className="img-1-about-section"
+              src={restaurant_chief}
+              alt="Little Lemon Restaurant food"
+              aria-label="Restaurant Chief Image"
+              style={{width: 400, height: 450, verticalAlign:"middle"}}
+            >
+            </img>
+          </div>
+          <div>
+            <img
+              className="img-2-about-section"
+              src={mario_and_adrian}
+              alt="Little Lemon Restaurant food"
+              aria-label="Mario and Adrian Image"
+              style={{width: 400, height: 450, verticalAlign:"middle"}}
+            >
+            </img>
+          </div>
         </div>
       </section>
     )

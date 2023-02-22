@@ -109,7 +109,8 @@ nav a:hover, a:focus {
   }
 
   .flexbox-item-intro-hero-section {
-    padding: 1em;
+    align-self: flex-start;
+    padding-left: 4em;
     text-align: center;
   }
 
@@ -129,6 +130,16 @@ nav a:hover, a:focus {
   display: flex;
   justify-content: center;
   padding-top: 8em;
+}
+
+/* BookingPage styling mobile*/
+@media (max-width: 767px) {
+  .flexbox-booking-page {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+  }
 }
 
 /* BookingForm styling */
@@ -163,8 +174,35 @@ nav a:hover, a:focus {
   width: 250px;
   gap: 10px;
   padding-left: 5em;
-  padding-top: 7em;
+  padding-top: 4em;
   padding-bottom: 4em;
+}
+
+.grid-details-booking-form button{
+  font-family: 'Karla', sans-serif;
+  font-weight: bold;
+  font-size: 12pt;
+  color: black;
+  text-align: center;
+  background: #f4ce14;
+  border-radius: 12px;
+  border: none;
+  padding: 8px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 30pt;
+}
+
+.grid-details-booking-form button:disabled {
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.grid-details-booking-form button:hover {background-color: #f4cf14b7}
+.grid-details-booking-form button:active {
+  background-color: #f4cf14b7;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
 
 .react-calendar {
@@ -233,6 +271,37 @@ nav a:hover, a:focus {
   background: #f4ce14;
  }
 
+ /* BookingForm styling mobile*/
+@media (max-width: 767px) {
+  .flexbox-calendar-booking-form {
+    padding-right: 0;
+    padding-top: 2em;
+    max-width: 400px;
+    margin: auto;
+  }
+
+  .react-calendar {
+    width: 100%;
+    font-size: 14pt;
+  }
+
+  .react-calendar__navigation button {
+    font-size: 14pt;
+  }
+
+  .flexbox-details-booking-form{
+    justify-content: center;
+    align-items: center;
+  }
+
+  .grid-details-booking-form {
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    padding-left: 2em;
+  }
+}
+
 /* AboutSection styling */
 .flexbox-container-about-section {
   background-color: #f4ce14;
@@ -267,7 +336,7 @@ nav a:hover, a:focus {
 
 .flexbox-item-images-about-section {
   position: relative;
-  padding-left: 9em;
+  padding-left: 8em;
   padding-top: 2em;
   padding-bottom: 12em;
 }
@@ -297,7 +366,12 @@ nav a:hover, a:focus {
     padding: 1em;
   }
 
-  .flexbox-item-2-about-section {
+  .flexbox-item-intro-about-section {
+    padding-right: 6em;
+    padding-top: 2em;
+  }
+
+  .flexbox-item-images-about-section {
     padding-left: 0;
     padding-bottom: 0;
   }
@@ -320,7 +394,7 @@ footer {
 
 .flexbox-item-img-footer{
   padding-top: 2em;
-  padding-right: 6em;
+  padding-right: 2em;
 }
 
 .flexbox-item-navigation-footer{
@@ -328,7 +402,7 @@ footer {
   font-weight: 400;
   font-size: 16pt;
   list-style-type: none;
-  padding-right: 6em;
+  padding-right: 2em;
 }
 
 .flexbox-item-navigation-footer a{
@@ -370,19 +444,45 @@ footer {
     margin: auto;
   }
   .flexbox-item-1-footer{
-    padding-left: 6em;
+    padding-left: 4em;
     padding-bottom: 0em;
   }
   .flexbox-item-navigation-footer{
-    padding-left: 6em;
+    padding-left: 2em;
     padding-bottom: 0em;
   }
   .flexbox-item-contact-footer{
-    padding-right: 5em;
+    padding-right: 6em;
     padding-bottom: 0em;
   }
   .flexbox-item-media-footer{
-    padding-right: 1em;
+    padding-right: 6em;
     padding-bottom: 1em;
   }
+}
+
+/* Confirmed Booking styling*/
+.confirmed-booking{
+  padding: 1em;
+}
+.confirmed-booking button {
+  font-family: 'Karla', sans-serif;
+  font-weight: bold;
+  font-size: 12pt;
+  color: black;
+  text-align: left;
+  background: #f4ce14;
+  border-radius: 12px;
+  border: none;
+  padding: 8px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 10pt;
+}
+
+.confirmed-booking button:hover {background-color: #f4cf14b7}
+.confirmed-booking button:active {
+  background-color: #f4cf14b7;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
